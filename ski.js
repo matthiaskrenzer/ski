@@ -59,6 +59,7 @@
 
   function setOverlay(title, show){
     if (title) overlay.querySelector('.title').textContent = title;
+    overlay.classList.toggle('is-wipeout', Boolean(show && title && /WIPEOUT/i.test(title)));
     overlay.style.display = show ? 'grid' : 'none';
   }
 

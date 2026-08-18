@@ -1,5 +1,5 @@
 /* ASCII Ski SW (scope: ./) */
-const CACHE = 'ski-v1';
+const CACHE = 'ski-v2';
 const ASSETS = [
   './',
   './index.html',

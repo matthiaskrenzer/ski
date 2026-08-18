@@ -70,6 +70,35 @@ pre#screen{
 .overlay .title{ font-size:44px; margin-bottom:8px; color:var(--c64-purple); }
 .overlay .small{ font-size:20px; opacity:.9; }
 
+/* Wipeout: kompakter, deckender Textblock — Spielfeld bleibt sichtbar */
+.overlay.is-wipeout{
+  background:transparent;
+  border:none;
+  padding:8px;
+}
+.overlay.is-wipeout .msg{
+  width:fit-content;
+  max-width:100%;
+  margin:0 auto;
+  padding:18px 22px;
+  background:#00010a;
+  border:2px dashed var(--c64-cyan);
+  color:var(--c64-green);
+}
+.overlay.is-wipeout .title{
+  color:var(--c64-purple);
+  text-shadow:
+    -1px 0 #000,
+     1px 0 #000,
+     0 -1px #000,
+     0  1px #000;
+}
+.overlay.is-wipeout .small{
+  color:var(--c64-green);
+  opacity:1;
+  text-shadow:0 1px 0 #000;
+}
+
 .dpad{
   position:absolute;
   inset:auto 12px 12px auto;
@@ -131,7 +160,15 @@ pre#screen{
   .hud{ flex-direction:column; align-items:flex-start; }
   .hud h1{ font-size:40px; }
   .overlay .title{ font-size:36px; }
+  .overlay.is-wipeout .msg{ padding:14px 12px; }
+  .overlay.is-wipeout .title{ font-size:32px; line-height:1.15; }
+  .overlay.is-wipeout .small{ font-size:16px; line-height:1.25; }
   pre#screen{ font-size:16px; letter-spacing:0; }
+}
+
+@media (max-width:400px){
+  .overlay.is-wipeout .title{ font-size:26px; }
+  .overlay.is-wipeout .small{ font-size:15px; }
 }
 
 @media (hover: hover) and (pointer: fine){
