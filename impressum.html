@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Impressum — ASCII Ski</title>
+  <meta name="theme-color" content="#000000">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="stylesheet" href="ski.css">
+</head>
+<body>
+  <main class="wrap">
+    <div class="page-frame">
+      <nav class="page-nav" aria-label="App-Menü">
+        <a href="./">ZUR APP</a>
+      </nav>
+      <h1>Impressum</h1>
+      <p>Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG) für die eigenständige Webanwendung ASCII Ski.</p>
+      <p>
+        Matthias Krenzer<br>
+        Spicherer Straße 103<br>
+        67663 Kaiserslautern<br>
+        Deutschland
+      </p>
+      <h2>Kontakt</h2>
+      <p>
+        Telefon: <a href="tel:+491728574882">0172 8574882</a><br>
+        E-Mail: <a href="mailto:krenzer@krenztek.de">krenzer@krenztek.de</a>
+      </p>
+      <h2>Verbraucherstreitbeilegung</h2>
+      <p>Ich bin weder verpflichtet noch bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+      <p class="legal-bar">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </p>
+    </div>
+  </main>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js', { scope: './' }).catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>

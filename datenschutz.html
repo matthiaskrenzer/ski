@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Datenschutz — ASCII Ski</title>
+  <meta name="theme-color" content="#000000">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="stylesheet" href="ski.css">
+</head>
+<body>
+  <main class="wrap">
+    <div class="page-frame">
+      <nav class="page-nav" aria-label="App-Menü">
+        <a href="./">ZUR APP</a>
+      </nav>
+      <h1>Datenschutzerklärung</h1>
+      <p>Stand: 18. August 2026</p>
+
+      <h2>1. Verantwortlicher</h2>
+      <p>Verantwortlich für die Verarbeitung personenbezogener Daten in dieser App ist:</p>
+      <p>
+        Matthias Krenzer<br>
+        Spicherer Straße 103<br>
+        67663 Kaiserslautern<br>
+        Deutschland
+      </p>
+      <p>
+        Telefon: <a href="tel:+491728574882">0172 8574882</a><br>
+        E-Mail: <a href="mailto:krenzer@krenztek.de">krenzer@krenztek.de</a>
+      </p>
+
+      <h2>2. Allgemeine Hinweise</h2>
+      <p>ASCII Ski ist eine eigenständige, statische Progressive Web App. Sie verwendet kein Kontaktformular, keine Analyse- oder Trackingdienste, keine Werbecookies und keine Anmeldung.</p>
+      <p>Der Spielstand liegt nur im Arbeitsspeicher des Browsers. Es werden kein Local Storage und kein Session Storage genutzt.</p>
+
+      <h2>3. Hosting</h2>
+      <p>Diese App wird über Firebase Hosting bereitgestellt. Anbieter ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Mutterunternehmen ist Google LLC, USA.</p>
+      <p>Beim Aufruf werden technisch erforderliche Verbindungsdaten verarbeitet, insbesondere IP-Adresse, Zeitpunkt, aufgerufene Datei, übertragene Datenmenge, Browsertyp und Betriebssystem.</p>
+      <p>Rechtsgrundlage ist Art. 6 Abs. 1 Buchstabe f DSGVO. Google kann Daten auch außerhalb der EU, insbesondere in den USA, verarbeiten und ist nach dem EU-US Data Privacy Framework zertifiziert.</p>
+      <p>Weitere Informationen: <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">https://firebase.google.com/support/privacy</a></p>
+
+      <h2>4. Schriftarten</h2>
+      <p>Die verwendete Schriftart wird von dieser App selbst ausgeliefert. Es werden keine Schriftarten von Google Fonts nachgeladen.</p>
+
+      <h2>5. Service Worker</h2>
+      <p>Ein Service Worker kann Anwendungsdateien im Browser-Cache speichern, damit die App offline nutzbar ist. Die Speicherung erfolgt auf Ihrem Gerät. Rechtsgrundlage ist § 25 Abs. 2 Nr. 2 TDDDG.</p>
+
+      <h2>6. Kontaktaufnahme</h2>
+      <p>Wenn Sie mich per E-Mail oder Telefon kontaktieren, verarbeite ich die mitgeteilten Angaben zur Bearbeitung der Anfrage (Art. 6 Abs. 1 Buchstabe b oder f DSGVO).</p>
+
+      <h2>7. Cookies</h2>
+      <p>Diese App setzt keine Cookies zu Analyse-, Werbe- oder Profilbildungszwecken ein. Ein Einwilligungsbanner ist nicht erforderlich.</p>
+
+      <h2>8. Ihre Rechte</h2>
+      <p>Sie haben insbesondere das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch. Nachricht an <a href="mailto:krenzer@krenztek.de">krenzer@krenztek.de</a>.</p>
+      <p>Beschwerderecht: Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Rheinland-Pfalz, Hintere Bleiche 34, 55116 Mainz, <a href="https://www.datenschutz.rlp.de/" rel="noopener noreferrer">https://www.datenschutz.rlp.de/</a>.</p>
+
+      <p class="legal-bar">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </p>
+    </div>
+  </main>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js', { scope: './' }).catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>

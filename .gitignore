@@ -1,0 +1,24 @@
+# Build & dependencies
+dist/
+node_modules/
+
+# Firebase local cache
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+ui-debug.log
+
+# Logs & temp
+*.log
+*.tmp
+*.temp
+.cache/
+
+# OS
+.DS_Store
+Thumbs.db
+._*
+
+# Secrets
+.env
+.env.*

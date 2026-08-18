@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de" class="js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ASCII Ski</title>
+  <meta name="description" content="ASCII Ski im C64-Retro-Look. Widmung: Für Udo May-Jung.">
+  <meta name="theme-color" content="#000000">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Ski">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="ski.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="hud">
+      <h1>ASCII SKI</h1>
+      <div class="stats">
+        <span id="score">SCORE: 0</span>
+        <span id="gates">GATES: 0</span>
+        <span id="speed">SPEED: 1</span>
+      </div>
+    </header>
+
+    <section class="stage">
+      <pre id="screen" aria-label="ASCII Ski Spielfeld" role="img"></pre>
+      <div class="overlay" id="overlay">
+        <div class="msg">
+          <div class="title">PRESS ENTER</div>
+          <div class="small">
+            ←/→ oder A/D • ↑/↓ = vor/zurück • P = Pause • R = Reset<br>
+            Slalom-Tore = |........| — passiere dazwischen<br>
+            <em>Widmung: Für Udo May-Jung</em>
+          </div>
+        </div>
+      </div>
+      <nav class="dpad" aria-label="Onscreen Controller">
+        <button type="button" class="btn up" aria-label="Up" data-dir="up">▲</button>
+        <div class="row">
+          <button type="button" class="btn left" aria-label="Left" data-dir="left">◀</button>
+          <button type="button" class="btn right" aria-label="Right" data-dir="right">▶</button>
+        </div>
+        <button type="button" class="btn down" aria-label="Down" data-dir="down">▼</button>
+      </nav>
+    </section>
+
+    <footer class="tips">
+      <p><strong>Hinweis:</strong> Bäume (Y/A), Steine (o) oder Torstangen (|) bedeuten Sturz. Alle 10 Punkte: minimal schneller.</p>
+    </footer>
+    <div class="legal-bar">
+      <button type="button" id="installBtn" hidden>INSTALLIEREN</button>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </main>
+  <script src="ski.js" defer></script>
+</body>
+</html>

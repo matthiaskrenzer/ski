@@ -1,0 +1,10 @@
+{
+  "name": "ascii-ski",
+  "private": true,
+  "description": "Standalone PWA: ASCII Ski",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "npx --yes serve . -p 4173",
+    "preview": "npx --yes serve dist -p 4174"
+  }
+}
